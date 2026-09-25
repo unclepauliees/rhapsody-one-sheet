@@ -1,0 +1,22 @@
+@page { size: 8.5in 11in; margin: 0; }
+.print-sheet { width: 8.5in; height: 11in; padding: 40px 48px 48px; background: #ece7da; color: #1c1712; print-color-adjust: exact; font-size: 12px; line-height: 1.55; overflow: hidden; }
+.print-sheet p { color: #4c463b; font-size: 12px; line-height: 1.65; }
+.print-sheet .print-top { display: flex; justify-content: space-between; align-items: center; height: 66px; border-bottom: 1px solid #cdc5b2; padding-bottom: 12px; }
+.print-sheet .print-top img { width: 174px; height: 62px; object-fit: contain; transform: scale(1.35); transform-origin: left center; }
+.print-sheet .print-top span { font-size: 10px; text-align: right; line-height: 1.7; }
+.print-opening { padding: 23px 0 22px; }
+.print-sheet .print-opening h1 { font-size: 55px; line-height: 1.02; max-width: 580px; margin-bottom: 15px; }
+.print-opening p { max-width: 670px; }
+.print-orbit { position: relative; height: 247px; background: #080706; overflow: hidden; }
+.print-orbit img { width: 100%; height: 100%; object-fit: cover; }
+.print-sheet .print-orbit h2 { position: absolute; left: 25px; top: 74px; width: 240px; font-size: 35px; line-height: 1.13; color: #ece7da; }
+.print-studio { display: grid; grid-template-columns: 215px 1fr; gap: 25px; padding: 25px 0 22px; }
+.print-sheet .print-studio h2 { font-size: 31px; line-height: 1.12; }
+.print-studio p + p { margin-top: 10px; }
+.print-timeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin: 0; padding: 22px 0; border-block: 1px solid #cdc5b2; }
+.print-timeline dt { color: #c93a1e; font-size: 12px; }
+.print-timeline dd { margin: 8px 0 0; font-size: 12px; }
+.print-invitation { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 26px; padding: 23px 0 22px; }
+.print-sheet .print-invitation h2 { font-size: 30px; line-height: 1.1; }
+.print-invitation a { display: inline-block; margin-top: 9px; font-size: 12px; text-decoration: underline; text-underline-offset: 4px; }
+.print-sheet .print-footer { display: flex; justify-content: space-between; border-top: 1px solid #cdc5b2; margin: 0; padding-top: 12px; font-size: 9px; }
