@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { asset } from "@/config/assets";
 import { ArrowUpRight, Download, Play, Pause, MousePointer2 } from "lucide-react";
-import { BRAND_NAME, SPINE, BOILERPLATE, PDF_PATH, LOCKUPS, INVITATION, PARENT_LINE, moments, timeline, type Moment } from "@/config/brand";
+import { BRAND_NAME, SPINE, BOILERPLATE, PDF_PATH, LOCKUPS, INVITATION, PARENT_LINE, moments, timeline, CREATIVE_FRAMEWORK, type Moment } from "@/config/brand";
 
 const Instrument = dynamic(() => import("@/components/ui/lunar-gravity-card"), {
   ssr: false,
@@ -52,7 +52,7 @@ export default function OneSheet() {
         <div id="space-panel" className="space-panel" role="tabpanel" aria-labelledby={`view-${views.indexOf(view)}`} tabIndex={0}>
           {view === "Introduction" && <><p className="space-intro">{BOILERPLATE}</p><p className="space-manifesto">Nobody has played this before.</p></>}
           {view === "The windows" && <><label className="window-picker">Choose a window<select value={moment} onChange={e => chooseMoment(e.target.value as Moment)}>{moments.map(m => <option key={m.id} value={m.id}>{m.label}</option>)}</select></label><p>{selected.body}</p><p className="space-note">{selected.note}</p></>}
-          {view === "The studio" && <><h2>A session. A real master.</h2><p>Compose a time-locked work around a specific pass, light condition, city or moment.</p><p className="space-note">Built for creative timelines: integration in weeks rather than years, with media rights returned. The take happens once, authenticated at source and archived with provenance.</p><dl className="space-timeline" aria-label="Program timeline">{timeline.map(([date, milestone]) => <div key={date}><dt>{date}</dt><dd>{milestone}</dd></div>)}</dl><details><summary>Your session is yours alone.</summary><p>Every work runs on physically and cryptographically segregated networks. No one else sees it, touches it, or shares the window.</p></details></>}
+          {view === "The studio" && <><h2>A session. A real master.</h2><p>Compose a time-locked work around a specific pass, light condition, city or moment.</p><p className="space-note">{CREATIVE_FRAMEWORK}</p><dl className="space-timeline" aria-label="Program timeline">{timeline.map(([date, milestone]) => <div key={date}><dt>{date}</dt><dd>{milestone}</dd></div>)}</dl><details><summary>Your session is yours alone.</summary><p>Every work runs on physically and cryptographically segregated networks. No one else sees it, touches it, or shares the window.</p></details></>}
         </div>
         <a className="space-cta" href={INVITATION}>Join the founding conversations<ArrowUpRight size={18}/></a>
       </div>

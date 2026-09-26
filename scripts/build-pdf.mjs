@@ -6,7 +6,7 @@ try {
  await page.goto(s.url+'/print');await page.evaluate(()=>document.fonts.ready);
  await page.evaluate(()=>Promise.all([...document.images].map(i=>i.decode())));
  const text=await page.locator('.print-sheet').innerText();
- for(const required of ['The first instrument for orbit.', 'merry@symphony-space.com', 'a Symphony Space program.', '5 OCTOBER 2026', 'OCT 2026', 'Studio opens in New York', 'APR 2028', 'First two works fly', 'Q2 2029', 'Commercial platform follows']) {
+ for(const required of ['The first instrument for orbit.', 'merry@symphony-space.com', 'a Symphony Space program.', '5 OCTOBER 2026', 'OCT 2026', 'Conversation Opens in New York', 'One creative framework brings each work to life in weeks, not years.', 'Media rights return to their owners, and each work stays protected on its own physically and cryptographically separate network.', 'APR 2028', 'First two works fly', 'Q2 2029', 'Commercial platform follows']) {
   if(!text.includes(required))throw new Error(`Required copy missing: ${required}`);
  }
  if(text.includes('\u2014'))throw new Error('Em dash found in PDF copy');

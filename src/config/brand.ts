@@ -3,11 +3,12 @@ export const BRAND_NAME = "Project Rhapsody";
 export const DESCRIPTOR = "Orbital Media Studio";
 export const SPINE = "The first instrument for orbit.";
 export const timeline = [
-  ["OCT 2026", "Studio opens in New York"],
+  ["OCT 2026", "Conversation Opens in New York"],
   ["APR 2028", "First two works fly"],
   ["Q2 2029", "Commercial platform follows"],
 ] as const;
 export const MANIFESTO = "Nobody has played this before.";
+export const CREATIVE_FRAMEWORK = "One creative framework brings each work to life in weeks, not years. Media rights return to their owners, and each work stays protected on its own physically and cryptographically separate network.";
 export const BOILERPLATE = `${BRAND_NAME} is Symphony Space's orbital media studio. Brands, artists and cultural institutions can create work shaped by the light, motion and physics of orbit.`;
 export const REVEAL_ISO = "2026-10-05T12:00:00-04:00";
 export const CONTACT_EMAIL = "merry@symphony-space.com";
